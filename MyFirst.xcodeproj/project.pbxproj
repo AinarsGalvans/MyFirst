@@ -498,8 +498,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainars.MyFirst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "72e91e8c-e07e-427f-a773-30be4adfae46";
-				PROVISIONING_PROFILE_SPECIFIER = "MyFirstApp Prod";
+				PROVISIONING_PROFILE = "9de98b27-ff00-49f0-bca5-5d9f11089b10";
+				PROVISIONING_PROFILE_SPECIFIER = "MyFirstApp AdHoc Prod";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
