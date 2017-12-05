@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6F67E11FD6A3D900405108 /* AppCenterXCUITestExtensions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8FE05D431FD58FAD00ABFC9A /* AppCenterXCUITestExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FD1F56E1FD1885D002625CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1F56D1FD1885D002625CA /* AppDelegate.swift */; };
 		8FD1F5701FD1885D002625CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1F56F1FD1885D002625CA /* ViewController.swift */; };
 		8FD1F5731FD1885D002625CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD1F5711FD1885D002625CA /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		8FD1F5781FD1885D002625CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD1F5761FD1885D002625CA /* LaunchScreen.storyboard */; };
 		8FD1F5831FD1885D002625CA /* MyFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1F5821FD1885D002625CA /* MyFirstTests.swift */; };
 		8FD1F58E1FD1885D002625CA /* MyFirstUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1F58D1FD1885D002625CA /* MyFirstUITests.swift */; };
+		8FE05D451FD5910600ABFC9A /* AppCenterXCUITestExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE05D431FD58FAD00ABFC9A /* AppCenterXCUITestExtensions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8FE05D471FD59FAC00ABFC9A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8F6F67E11FD6A3D900405108 /* AppCenterXCUITestExtensions.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FE05D4B1FD6927C00ABFC9A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8FD1F56A1FD1885D002625CA /* MyFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD1F56D1FD1885D002625CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +72,7 @@
 		8FD1F5891FD1885D002625CA /* MyFirstUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD1F58D1FD1885D002625CA /* MyFirstUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstUITests.swift; sourceTree = "<group>"; };
 		8FD1F58F1FD1885D002625CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE05D431FD58FAD00ABFC9A /* AppCenterXCUITestExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterXCUITestExtensions.framework; path = Carthage/Build/iOS/AppCenterXCUITestExtensions.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE05D451FD5910600ABFC9A /* AppCenterXCUITestExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +108,7 @@
 				8FD1F5811FD1885D002625CA /* MyFirstTests */,
 				8FD1F58C1FD1885D002625CA /* MyFirstUITests */,
 				8FD1F56B1FD1885D002625CA /* Products */,
+				8FE05D421FD58FAC00ABFC9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +153,14 @@
 			path = MyFirstUITests;
 			sourceTree = "<group>";
 		};
+		8FE05D421FD58FAC00ABFC9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FE05D431FD58FAD00ABFC9A /* AppCenterXCUITestExtensions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +171,7 @@
 				8FD1F5661FD1885D002625CA /* Sources */,
 				8FD1F5671FD1885D002625CA /* Frameworks */,
 				8FD1F5681FD1885D002625CA /* Resources */,
+				8FE05D4B1FD6927C00ABFC9A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +207,7 @@
 				8FD1F5851FD1885D002625CA /* Sources */,
 				8FD1F5861FD1885D002625CA /* Frameworks */,
 				8FD1F5871FD1885D002625CA /* Resources */,
+				8FE05D471FD59FAC00ABFC9A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -428,6 +466,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MyFirst/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainars.MyFirst;
@@ -443,6 +485,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MyFirst/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainars.MyFirst;
@@ -489,6 +535,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MyFirstUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainars.MyFirstUITests;
@@ -504,6 +554,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MyFirstUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainars.MyFirstUITests;
