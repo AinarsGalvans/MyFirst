@@ -38,11 +38,13 @@ class MyFirstUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssert(XCUIApplication().staticTexts["Hello world"].exists)
         ACTLabel.labelStep("Given the app has launched")
+        XCTAssertEqual(XCUIApplication().staticTexts.count,1,"Trivial test to explore reprting")
+        
     }
     
     func _testToFail() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //XCTAssert(XCUIApplication().staticTexts["Hello world!!!"].exists, "This assertion is expected to fail! I want to see a failure report")
+        XCTAssert(XCUIApplication().staticTexts["Hello world!!!"].exists, "This assertion is expected to fail! I want to see a failure report")
     }
 }
