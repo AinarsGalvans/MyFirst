@@ -36,7 +36,7 @@ class MyFirstUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssert(XCUIApplication().staticTexts["Hello world"].exists)
+        XCTAssert(XCUIApplication().staticTexts["Hello world 2"].exists)
         ACTLabel.labelStep("Given the app has launched")
         XCTAssertEqual(XCUIApplication().staticTexts.count,1,"Trivial test to explore reprting")
         
