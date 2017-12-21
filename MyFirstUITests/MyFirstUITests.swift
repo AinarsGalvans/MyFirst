@@ -20,8 +20,7 @@ class MyFirstUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         
-       //let app = XCUIApplication()
-        //app.launch()
+      // XCUIApplication().launch()
         //.launch()
          ACTLaunch.launch()
         
@@ -30,6 +29,7 @@ class MyFirstUITests: XCTestCase {
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        ACTLabel.labelStep("End of test")
         super.tearDown()
     }
     
@@ -38,13 +38,34 @@ class MyFirstUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssert(XCUIApplication().staticTexts["Hello world 2"].exists)
         ACTLabel.labelStep("Given the app has launched")
-        XCTAssertEqual(XCUIApplication().staticTexts.count,1,"Trivial test to explore reprting")
+        
+        let app = XCUIApplication()
+        let textField = app.otherElements.containing(.staticText, identifier:"Hello world 2").children(matching: .textField).element
+        textField.tap()
+        ACTLabel.labelStep("Start Typing text")
+        textField.typeText("text")
+        
+        let deleteKey = app/*@START_MENU_TOKEN@*/.keys["delete"]/*[[".keyboards.keys[\"delete\"]",".keys[\"delete\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        deleteKey.tap()
+        textField.typeText("-mex")
+        
+        ACTLabel.labelStep("Finish typing text")
+        app.buttons["OK"].tap()
+
+    }
+    
+    func testToFail() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        ACTLabel.labelStep("Second test started")
+        XCTAssert(XCUIApplication().staticTexts["Hello world!!!"].exists, "This assertion is expected to fail! I want to see a failure report")
+        ACTLabel.labelStep("Second test must have failed")
         
     }
     
-    func _testToFail() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssert(XCUIApplication().staticTexts["Hello world!!!"].exists, "This assertion is expected to fail! I want to see a failure report")
+    func testOneMore(){
+        ACTLabel.labelStep("Last test started")
+        XCTAssertEqual(XCUIApplication().staticTexts.count,1,"Trivial test to explore reprting")
+        
     }
 }
