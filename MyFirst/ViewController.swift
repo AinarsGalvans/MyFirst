@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Crashlytics
+
 
 class ViewController: UIViewController {
 
@@ -20,6 +22,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet var label: UILabel!
+    
+    @IBAction func ButonPressed() {
+        label.text = "Button Pressed !"
+        Crashlytics.sharedInstance().crash()
 
+    }
+    
+    
 }
 

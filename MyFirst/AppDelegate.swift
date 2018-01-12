@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Fabric.with([Crashlytics.self])
+        Crashlytics.sharedInstance().setIntValue(123456, forKey: "test data")
+        Crashlytics.sharedInstance().setUserEmail("user@fabric.io")
+        Crashlytics.sharedInstance().setUserIdentifier("12345")
+        Crashlytics.sharedInstance().setUserName("Test User")
+        
         return true
     }
 

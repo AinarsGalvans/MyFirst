@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F6F67E11FD6A3D900405108 /* AppCenterXCUITestExtensions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8FE05D431FD58FAD00ABFC9A /* AppCenterXCUITestExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F28D8BB1FE7BCAD00C3339A /* AppCenterXCUITestExtensions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8FE05D431FD58FAD00ABFC9A /* AppCenterXCUITestExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FD1F56E1FD1885D002625CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1F56D1FD1885D002625CA /* AppDelegate.swift */; };
 		8FD1F5701FD1885D002625CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1F56F1FD1885D002625CA /* ViewController.swift */; };
 		8FD1F5731FD1885D002625CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD1F5711FD1885D002625CA /* Main.storyboard */; };
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8F6F67E11FD6A3D900405108 /* AppCenterXCUITestExtensions.framework in CopyFiles */,
+				8F28D8BB1FE7BCAD00C3339A /* AppCenterXCUITestExtensions.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3AB82BCEFE1505D9DF5B6563 /* Pods-MyFirst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirst.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFirst/Pods-MyFirst.release.xcconfig"; sourceTree = "<group>"; };
+		54BA153EEA93D095304CFDBC /* Pods-MyFirst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirst.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFirst/Pods-MyFirst.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD1F56A1FD1885D002625CA /* MyFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD1F56D1FD1885D002625CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD1F56F1FD1885D002625CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				8FD1F58C1FD1885D002625CA /* MyFirstUITests */,
 				8FD1F56B1FD1885D002625CA /* Products */,
 				8FE05D421FD58FAC00ABFC9A /* Frameworks */,
+				F05E0EFDA1FF96D0FC5E4228 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +164,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F05E0EFDA1FF96D0FC5E4228 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54BA153EEA93D095304CFDBC /* Pods-MyFirst.debug.xcconfig */,
+				3AB82BCEFE1505D9DF5B6563 /* Pods-MyFirst.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,10 +180,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD1F5921FD1885D002625CA /* Build configuration list for PBXNativeTarget "MyFirst" */;
 			buildPhases = (
+				DB8FF97304E640B3FAF28427 /* [CP] Check Pods Manifest.lock */,
 				8FD1F5661FD1885D002625CA /* Sources */,
 				8FD1F5671FD1885D002625CA /* Frameworks */,
 				8FD1F5681FD1885D002625CA /* Resources */,
 				8FE05D4B1FD6927C00ABFC9A /* Embed Frameworks */,
+				FE391CD83A8E74B7AA1F839B /* [CP] Embed Pods Frameworks */,
+				92AAFE45A490B74BCCAAEB06 /* [CP] Copy Pods Resources */,
+				8FA0B3AC2004AC9B00D08CA0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,7 +222,6 @@
 			buildPhases = (
 				8FD1F5851FD1885D002625CA /* Sources */,
 				8FD1F5861FD1885D002625CA /* Frameworks */,
-				8FD1F5871FD1885D002625CA /* Resources */,
 				8FE05D471FD59FAC00ABFC9A /* CopyFiles */,
 			);
 			buildRules = (
@@ -283,14 +298,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FD1F5871FD1885D002625CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FA0B3AC2004AC9B00D08CA0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Fabric/run\" aa18f62f10187eb1bcd99abcfb630f2ce860d1d5 14ed603c18c490ef646c84979d032bc526f15e0321b02685a3ef12e0e5511ab0";
 		};
-/* End PBXResourcesBuildPhase section */
+		92AAFE45A490B74BCCAAEB06 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFirst/Pods-MyFirst-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB8FF97304E640B3FAF28427 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFirst-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE391CD83A8E74B7AA1F839B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFirst/Pods-MyFirst-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FD1F5661FD1885D002625CA /* Sources */ = {
@@ -384,7 +456,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -462,6 +534,7 @@
 		};
 		8FD1F5931FD1885D002625CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54BA153EEA93D095304CFDBC /* Pods-MyFirst.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -484,8 +557,10 @@
 		};
 		8FD1F5941FD1885D002625CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AB82BCEFE1505D9DF5B6563 /* Pods-MyFirst.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z22EKAV9A2;
@@ -565,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z22EKAV9A2;
