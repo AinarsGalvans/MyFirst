@@ -54,7 +54,7 @@ class MyFirstUITests: XCTestCase {
 
     }
     
-    func testToFail() {
+    func _testToFail() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         ACTLabel.labelStep("Second test started")

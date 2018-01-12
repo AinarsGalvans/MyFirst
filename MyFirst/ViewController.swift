@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet var HelloWorld: UILabel!
+    
+    @IBAction func ButtonPressed(_ sender: Any) {
+        HelloWorld.text = "Button pressed !"
+    }
 }
 
