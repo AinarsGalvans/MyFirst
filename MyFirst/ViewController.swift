@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet var HelloWorld: UILabel!
     
     @IBAction func ButtonPressed(_ sender: Any) {
-        HelloWorld.text = "Button pressed !"
+        //HelloWorld.text = "Button pressed !"
     }
 }
 
