@@ -67,5 +67,18 @@ class MyFirstUITests: XCTestCase {
         ACTLabel.labelStep("Last test started")
         XCTAssertEqual(XCUIApplication().staticTexts.count,1,"Trivial test to explore reprting")
         
+        
+    }
+    
+    func testHelloWorldButton() {
+        
+        let app = XCUIApplication()
+        let textField = app.otherElements.containing(.button, identifier:"OK").children(matching: .textField).element
+        textField.tap()
+        textField.typeText("assad")
+        app.buttons["OK"].tap()
+        XCTAssert(app.staticTexts["Button pressed !"].exists)
+        
+        
     }
 }
